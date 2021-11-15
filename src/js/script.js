@@ -58,23 +58,22 @@
       thisProduct.id = id;
       thisProduct.data = data;
 
-      thisProduct.initAccordion();
       thisProduct.renderInMenu();
+      thisProduct.initAccordion();
       console.log('new product:', thisProduct);
     }
     renderInMenu(){
       const thisProduct = this;
+      console.log('bla bla:', thisProduct);
 
       const generatedHTML = templates.menuProduct(thisProduct.data);
       thisProduct.element = utils.createDOMFromHTML(generatedHTML);
       const menuContainer = document.querySelector(select.containerOf.menu);
       menuContainer.appendChild(thisProduct.element);
-
     }
     initAccordion(){
       const thisProduct = this;
       const clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
-      console.log('co to jest:', clickableTrigger);
       clickableTrigger.addEventListener('click', function(event){
         event.preventDefault();
         const activeProduct =  document.querySelector(select.all.menuProductsActive);
