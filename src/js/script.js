@@ -167,7 +167,7 @@
 
       console.log('AmountWidget:', thisWidget);
       console.log('constructor elements:', element);
-      thisWidget.getElements();
+      thisWidget.getElements(element);
     }
 
     getElements(element) {
