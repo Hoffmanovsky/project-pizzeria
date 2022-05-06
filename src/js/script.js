@@ -219,7 +219,6 @@
           label: param.label,
           options: {}
         };
-        console.log('Kurwa mać:', params);
 
         for(let optionId in param.options) {
           const option = param.options[optionId];
